@@ -2,7 +2,7 @@ import { orderPizza } from "./redux/pizza/PizzaActions"
 import { connect } from "react-redux"
 
 function PizzaBox({pizzaBase, orderPizza}) {
-  console.log({pizzaBase, orderPizza})
+  // console.log({pizzaBase, orderPizza})
   return (
     <div className='container'>
       <h2 className='text'>Number of Pizza Base available - {pizzaBase}</h2>

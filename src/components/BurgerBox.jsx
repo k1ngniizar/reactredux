@@ -4,7 +4,7 @@ import { orderBurger } from './redux/burger/burgerActions'
 
 function BurgerBox() {
   const burgerBase = useSelector(({burgerReducer}) => burgerReducer.burgerBase)
-  console.log(burgerBase)
+  // console.log(burgerBase)
   const dispatch = useDispatch()
   return (
     <div className='container'>
