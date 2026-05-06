@@ -13,7 +13,7 @@ function PizzaBox({pizzaBase, orderPizza}) {
 
 const mapStateToProps = (state) => {
   return {
-    pizzaBase: state.pizzaBase
+    pizzaBase: state.PizzaReducer.pizzaBase
   }
 }
 
