@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { orderBurger } from './redux/burger/burgerActions'
 
 function BurgerBox() {
-  const burgerBase = useSelector(({burgerReducer}) => burgerReducer.burgerBase)
+  const {burgerBase} = useSelector(state => state.burgerReducer)
   // console.log(burgerBase)
   const dispatch = useDispatch()
   return (

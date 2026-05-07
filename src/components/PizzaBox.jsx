@@ -19,7 +19,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch)=>{
   return{
-orderPizza: ()=> dispatch(orderPizza())
+orderPizza: ()=> dispatch(orderPizza(1))
   }
 }
 
