@@ -4,6 +4,7 @@ import { store } from "./components/redux/store";
 import HookContainer from "./components/HookContainer";
 import BurgerBox from "./components/BurgerBox";
 import CustomerChoice from "./components/CustomerChoice";
+import ProductContainer from "./components/ProductContainer";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <PizzaBox />
       <HookContainer />
       <BurgerBox />
+      <ProductContainer />
     </Provider>
   );
 }

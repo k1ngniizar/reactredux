@@ -17,7 +17,8 @@ const productsReducer = (state = initialState, action) => {
         case FETCH_ERROR:
             return {
                 ...state,
-                error: action.payload
+                error: action.payload,
+                loading: false
             }
         case FETCH_PRODUCTS:
             return {
@@ -28,3 +29,5 @@ const productsReducer = (state = initialState, action) => {
             return state
     }
 }
+
+export default productsReducer

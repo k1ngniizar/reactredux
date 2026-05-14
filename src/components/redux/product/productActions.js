@@ -1,6 +1,7 @@
 import axios from "axios"
 import { FETCH_ERROR, FETCH_PRODUCTS, FETCH_SUCCESS } from "./productType"
 
+
 const fetchProducts = () => {
  return {
     type: FETCH_PRODUCTS,
@@ -21,15 +22,21 @@ const fetchSuccess = (products) => {
     }
 }
 
-export const fetchProduct = async () => {
-    // fetchProducts()
+export const fetchProduct = () => {
+    return (dispatch) => {
 
-    axios("https://fakestoreapi.com/products")
+        dispatch(fetchProducts())
+
+        axios("https://fakestoreapi.com/products")
         .then( response => {
             console.log(response)
+            const data =  response.data
+            dispatch(fetchSuccess(data))
         })
         .catch(err => {
+            dispatch(fetchError("Error fetching products"))
             console.log(err)
         })
+    }
 }
 
